@@ -1,31 +1,41 @@
-import React from 'react';
+import React, { Component } from 'react';
+import WebFont from 'webfontloader';
 import '@rmwc/theme/styles';
+import '@rmwc/button/styles';
 import '@rmwc/grid/styles';
 import './App.css';
 
-import { Theme, ThemeProvider } from '@rmwc/theme';
-import { Grid, GridRow, GridCell } from '@rmwc/grid';
+import Intro from './components/intro';
+import ColorSelector from './components/color_selector';
+import { DEFAULT_STYLE } from './default_styles/style';
 
-function App() {
-  return (
-    <div className="App">
-      <ThemeProvider
-        options={{
-          primary: 'white',
-          secondary: 'white',
-          primaryBg: 'black',
-          secondaryBg: '#b49bac',
-        }}
-      >
-        <Grid>
-          <GridRow>
-            <GridCell span={8}>a</GridCell>
-            <GridCell span={4}>b</GridCell>
-          </GridRow>
-        </Grid>
-      </ThemeProvider>
-    </div>
-  );
+WebFont.load({
+  google: {
+    families: ['Roboto:300,500,700', 'Material Icons'],
+  },
+});
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = DEFAULT_STYLE;
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(style) {
+    const { primary, secondary } = style;
+    this.setState({ primary, secondary });
+  }
+
+  render() {
+    const { primary, secondary } = this.state;
+    return (
+      <div>
+        <Intro primary={primary} secondary={secondary} />
+        <ColorSelector handleClick={this.handleClick} />
+      </div>
+    );
+  }
 }
 
 export default App;
