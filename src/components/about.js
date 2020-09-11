@@ -3,9 +3,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const About = props => {
-  const { terciary } = props;
+  const { tertiary } = props;
   return (
-    <div style={terciary}>
+    <div style={tertiary}>
       massa ultricies morbi tristique senectus et netus et malesuada fames ac
       turpis egestas sed tempus urna et pharetra pharetra massa massa ultricies
       morbi tristique senectus et netus et malesuada fames ac turpis egestas sed
@@ -15,7 +15,7 @@ const About = props => {
 };
 
 About.propTypes = {
-  terciary: PropTypes.object.isRequired,
+  tertiary: PropTypes.object.isRequired,
 };
 
 export default About;

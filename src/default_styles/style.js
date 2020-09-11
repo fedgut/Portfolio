@@ -7,7 +7,7 @@ export const DEFAULT_STYLE = {
     color: '#ffffff',
     background: '#ff524e',
   },
-  terciary: {
+  tertiary: {
     color: '#0c1011',
     background: '#ffffff',
     padding: '1.5rem 3.5rem',
@@ -23,7 +23,7 @@ export const AQUA_STYLE = {
     color: '#ffffff',
     background: '#96a9a3',
   },
-  terciary: {
+  tertiary: {
     color: '#000000',
     background: '#afd9dd',
     padding: '1.5rem 3.5rem',
