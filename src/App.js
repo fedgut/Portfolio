@@ -29,8 +29,9 @@ class App extends Component {
 
   render() {
     const { primary, secondary } = this.state;
+    const background = primary;
     return (
-      <div>
+      <div style={background}>
         <Intro primary={primary} secondary={secondary} />
         <ColorSelector handleClick={this.handleClick} />
       </div>

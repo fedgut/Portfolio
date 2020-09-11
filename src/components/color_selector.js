@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from '@rmwc/button';
 import { Grid, GridRow } from '@rmwc/grid';
-import { DEFAULT_STYLE, DARK_STYLE } from '../default_styles/style';
+import { DEFAULT_STYLE, AQUA_STYLE } from '../default_styles/style';
 
 function ColorSelector(props) {
   const { handleClick } = props;
@@ -11,7 +11,7 @@ function ColorSelector(props) {
     <Grid>
       <GridRow>
         <Button onClick={() => handleClick(DEFAULT_STYLE)}>Grey-Coral</Button>
-        <Button onClick={() => handleClick(DARK_STYLE)}>Dark Mode</Button>
+        <Button onClick={() => handleClick(AQUA_STYLE)}> Aqua </Button>
       </GridRow>
     </Grid>
   );

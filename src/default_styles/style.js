@@ -9,7 +9,7 @@ export const DEFAULT_STYLE = {
   },
 };
 
-export const DARK_STYLE = {
+export const AQUA_STYLE = {
   primary: {
     color: '#ffffff',
     background: '#0f8d99',
