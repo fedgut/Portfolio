@@ -31,7 +31,8 @@ class CardContainer extends React.Component {
   }
 }
 
-CardContainer.propType = {
+CardContainer.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
   cardArray: PropTypes.array.isRequired,
 };
 
