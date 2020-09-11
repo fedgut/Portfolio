@@ -6,6 +6,7 @@ import '@rmwc/grid/styles';
 import './App.css';
 
 import Intro from './components/intro';
+import About from './components/about';
 import ColorSelector from './components/color_selector';
 import { DEFAULT_STYLE } from './default_styles/style';
 
@@ -23,16 +24,17 @@ class App extends Component {
   }
 
   handleClick(style) {
-    const { primary, secondary } = style;
-    this.setState({ primary, secondary });
+    const { primary, secondary, terciary } = style;
+    this.setState({ primary, secondary, terciary });
   }
 
   render() {
-    const { primary, secondary } = this.state;
+    const { primary, secondary, terciary } = this.state;
     const background = primary;
     return (
       <div style={background}>
         <Intro primary={primary} secondary={secondary} />
+        <About terciary={terciary} />
         <ColorSelector handleClick={this.handleClick} />
       </div>
     );
