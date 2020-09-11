@@ -3,11 +3,14 @@ import WebFont from 'webfontloader';
 import '@rmwc/theme/styles';
 import '@rmwc/button/styles';
 import '@rmwc/grid/styles';
+import '@rmwc/typography/styles';
+import '@rmwc/card/styles';
 import './App.css';
 
 import Intro from './components/intro';
 import About from './components/about';
-import ColorSelector from './components/color_selector';
+import ColorSelector from './components/colorSelector';
+import CardElement from './components/cardElement';
 import { DEFAULT_STYLE } from './default_styles/style';
 
 WebFont.load({
@@ -36,6 +39,12 @@ class App extends Component {
         <Intro primary={primary} secondary={secondary} />
         <About terciary={terciary} />
         <ColorSelector handleClick={this.handleClick} />
+        <CardElement
+          title="Title"
+          description="Description"
+          demo="https://www.google.com"
+          repo="https://github.com/fedgut"
+        />
       </div>
     );
   }
