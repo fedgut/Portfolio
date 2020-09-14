@@ -37,10 +37,10 @@ class App extends Component {
         <CardContainer
           cardArray={[
             {
-              title: 'Title',
+              name: 'Title',
               description: 'Description',
-              demo: 'https://www.google.com',
-              repo: 'https://github.com/fedgut',
+              homepageUrl: 'https://www.google.com',
+              url: 'https://github.com/fedgut',
               image: placeholder,
             },
           ]}

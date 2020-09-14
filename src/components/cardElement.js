@@ -11,11 +11,11 @@ import {
 import { Typography } from '@rmwc/typography';
 
 function CardElement(props) {
-  const { image, title, description, demo, repo } = props;
+  const { image, name, description, homepageUrl, url } = props;
 
   return (
     <Card style={{ width: '21rem' }}>
-      <CardPrimaryAction tag="a" target="_blank" href={`${demo}`}>
+      <CardPrimaryAction tag="a" target="_blank" href={`${homepageUrl}`}>
         <CardMedia
           sixteenByNine
           style={{
@@ -29,7 +29,7 @@ function CardElement(props) {
             theme="textSecondaryOnBackground"
             style={{ marginTop: '2rem' }}
           >
-            {`${title}`}
+            {`${name}`}
           </Typography>
           <Typography use="body1" tag="div" theme="textSecondaryOnBackground">
             {`${description}`}
@@ -38,10 +38,10 @@ function CardElement(props) {
       </CardPrimaryAction>
       <CardActions>
         <CardActionButtons>
-          <CardActionButton tag="a" target="_blank" href={`${repo}`}>
+          <CardActionButton tag="a" target="_blank" href={`${url}`}>
             Repo
           </CardActionButton>
-          <CardActionButton tag="a" target="_blank" href={`${demo}`}>
+          <CardActionButton tag="a" target="_blank" href={`${homepageUrl}`}>
             Live version
           </CardActionButton>
         </CardActionButtons>
@@ -52,10 +52,10 @@ function CardElement(props) {
 
 CardElement.propTypes = {
   image: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  demo: PropTypes.string.isRequired,
-  repo: PropTypes.string.isRequired,
+  homepageUrl: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };
 
 export default CardElement;

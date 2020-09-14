@@ -17,11 +17,11 @@ class CardContainer extends React.Component {
         <GridRow>
           {cardArray.map(card => (
             <CardElement
-              key={card.title}
-              title={card.title}
+              key={card.name}
+              name={card.name}
               description={card.description}
-              demo={card.demo}
-              repo={card.repo}
+              homepageUrl={card.homepageUrl}
+              url={card.url}
               image={card.image}
             />
           ))}
