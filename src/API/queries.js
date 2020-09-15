@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
-// eslint-disable-next-line import/prefer-default-export
-export const GITHUB_QUERY = gql`
+
+const GITHUB_QUERY = gql`
   {
     user(login: "fedgut") {
       pinnedItems(first: 6) {
@@ -19,3 +19,5 @@ export const GITHUB_QUERY = gql`
     }
   }
 `;
+
+export default GITHUB_QUERY;

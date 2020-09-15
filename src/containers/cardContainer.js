@@ -1,28 +1,30 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Grid, GridRow } from '@rmwc/grid';
+import { Grid, GridCell } from '@rmwc/grid';
 import { useQuery } from '@apollo/client';
 import CardElement from '../components/cardElement';
-import { GITHUB_QUERY } from '../API/queries';
+import GITHUB_QUERY from '../API/queries';
 
-function CardContainer(props) {
-  const data = useQuery(GITHUB_QUERY);
-  const { cardArray } = props;
-  console.log(data);
+function CardContainer() {
+  const { loading, error, data } = useQuery(GITHUB_QUERY);
+
+  if (loading) return 'Loading...';
+  if (error) return `Error! ${error.message}`;
+
+  const cardArray = data.user.pinnedItems.edges;
+
   return (
     <Grid>
-      <GridRow>
-        {cardArray.map(card => (
+      {cardArray.map(card => (
+        <GridCell key={card.node.name}>
           <CardElement
-            key={card.name}
-            name={card.name}
-            description={card.description}
-            homepageUrl={card.homepageUrl}
-            url={card.url}
+            name={card.node.name}
+            description={card.node.description}
+            homepageUrl={card.node.homepageUrl}
+            url={card.node.url}
             image={card.image}
           />
-        ))}
-      </GridRow>
+        </GridCell>
+      ))}
     </Grid>
   );
 }

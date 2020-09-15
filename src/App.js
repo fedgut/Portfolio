@@ -7,7 +7,7 @@ import '@rmwc/card/styles';
 import './App.css';
 
 import { ApolloProvider } from '@apollo/client';
-import gitHubClient from './API/gitHubClient';
+import client from './API/gitHubClient';
 import Intro from './components/intro';
 import About from './components/about';
 import ColorSelector from './components/colorSelector';
@@ -33,7 +33,7 @@ class App extends Component {
     const background = primary;
     return (
       <div style={background}>
-        <ApolloProvider client={gitHubClient}>
+        <ApolloProvider client={client}>
           <Intro primary={primary} secondary={secondary} />
           <About tertiary={tertiary} />
           <ColorSelector handleClick={this.handleClick} />
