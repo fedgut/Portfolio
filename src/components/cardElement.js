@@ -14,7 +14,7 @@ function CardElement(props) {
   const { image, name, description, homepageUrl, url } = props;
 
   return (
-    <Card style={{ width: '21rem' }}>
+    <Card style={{ width: '21rem', height: '421px' }}>
       <CardPrimaryAction tag="a" target="_blank" href={`${homepageUrl}`}>
         <CardMedia
           sixteenByNine

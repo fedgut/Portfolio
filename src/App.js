@@ -14,8 +14,6 @@ import ColorSelector from './components/colorSelector';
 import CardContainer from './containers/cardContainer';
 import { DEFAULT_STYLE } from './default_styles/style';
 
-import placeholder from './images/placeholder.png';
-
 class App extends Component {
   constructor() {
     super();
@@ -37,17 +35,7 @@ class App extends Component {
           <Intro primary={primary} secondary={secondary} />
           <About tertiary={tertiary} />
           <ColorSelector handleClick={this.handleClick} />
-          <CardContainer
-            cardArray={[
-              {
-                name: 'Title',
-                description: 'Description',
-                homepageUrl: 'https://www.google.com',
-                url: 'https://github.com/fedgut',
-                image: placeholder,
-              },
-            ]}
-          />
+          <CardContainer style={background} />
         </ApolloProvider>
       </div>
     );

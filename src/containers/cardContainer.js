@@ -13,7 +13,7 @@ function CardContainer() {
   const cardArray = data.user.pinnedItems.edges;
 
   return (
-    <Grid>
+    <Grid className="card-grid">
       {cardArray.map(card => (
         <GridCell key={card.node.name}>
           <CardElement
