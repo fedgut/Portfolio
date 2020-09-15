@@ -1,39 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid, GridRow } from '@rmwc/grid';
+import { useQuery } from '@apollo/client';
 import CardElement from '../components/cardElement';
+import { GITHUB_QUERY } from '../API/queries';
 
-class CardContainer extends React.Component {
-  constructor(props) {
-    super();
-    this.props = props;
-  }
-
-  render() {
-    const { cardArray } = this.props;
-
-    return (
-      <Grid>
-        <GridRow>
-          {cardArray.map(card => (
-            <CardElement
-              key={card.name}
-              name={card.name}
-              description={card.description}
-              homepageUrl={card.homepageUrl}
-              url={card.url}
-              image={card.image}
-            />
-          ))}
-        </GridRow>
-      </Grid>
-    );
-  }
+function CardContainer(props) {
+  const data = useQuery(GITHUB_QUERY);
+  const { cardArray } = props;
+  console.log(data);
+  return (
+    <Grid>
+      <GridRow>
+        {cardArray.map(card => (
+          <CardElement
+            key={card.name}
+            name={card.name}
+            description={card.description}
+            homepageUrl={card.homepageUrl}
+            url={card.url}
+            image={card.image}
+          />
+        ))}
+      </GridRow>
+    </Grid>
+  );
 }
-
-CardContainer.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  cardArray: PropTypes.array.isRequired,
-};
 
 export default CardContainer;

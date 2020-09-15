@@ -4,10 +4,8 @@ import { RMWCProvider } from '@rmwc/provider';
 import App from './App';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <RMWCProvider>
-      <App />
-    </RMWCProvider>
-  </React.StrictMode>,
+  <RMWCProvider>
+    <App />
+  </RMWCProvider>,
   document.getElementById('root'),
 );

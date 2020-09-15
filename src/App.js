@@ -6,6 +6,8 @@ import '@rmwc/typography/styles';
 import '@rmwc/card/styles';
 import './App.css';
 
+import { ApolloProvider } from '@apollo/client';
+import gitHubClient from './API/gitHubClient';
 import Intro from './components/intro';
 import About from './components/about';
 import ColorSelector from './components/colorSelector';
@@ -31,20 +33,22 @@ class App extends Component {
     const background = primary;
     return (
       <div style={background}>
-        <Intro primary={primary} secondary={secondary} />
-        <About tertiary={tertiary} />
-        <ColorSelector handleClick={this.handleClick} />
-        <CardContainer
-          cardArray={[
-            {
-              name: 'Title',
-              description: 'Description',
-              homepageUrl: 'https://www.google.com',
-              url: 'https://github.com/fedgut',
-              image: placeholder,
-            },
-          ]}
-        />
+        <ApolloProvider client={gitHubClient}>
+          <Intro primary={primary} secondary={secondary} />
+          <About tertiary={tertiary} />
+          <ColorSelector handleClick={this.handleClick} />
+          <CardContainer
+            cardArray={[
+              {
+                name: 'Title',
+                description: 'Description',
+                homepageUrl: 'https://www.google.com',
+                url: 'https://github.com/fedgut',
+                image: placeholder,
+              },
+            ]}
+          />
+        </ApolloProvider>
       </div>
     );
   }
