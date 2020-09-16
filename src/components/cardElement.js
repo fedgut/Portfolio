@@ -11,7 +11,11 @@ import {
 import { Typography } from '@rmwc/typography';
 
 function CardElement(props) {
-  const { image, name, description, homepageUrl, url } = props;
+  const { image, name, description, homepageUrl, url, style } = props;
+
+  // Here we invert color and background to give a better look and feel
+  const { color } = style;
+  const backgroundColor = style.background;
 
   return (
     <Card style={{ width: '21rem', height: '421px' }}>
@@ -38,10 +42,20 @@ function CardElement(props) {
       </CardPrimaryAction>
       <CardActions>
         <CardActionButtons>
-          <CardActionButton tag="a" target="_blank" href={`${url}`}>
+          <CardActionButton
+            tag="a"
+            target="_blank"
+            href={`${url}`}
+            style={{ color, backgroundColor }}
+          >
             Repo
           </CardActionButton>
-          <CardActionButton tag="a" target="_blank" href={`${homepageUrl}`}>
+          <CardActionButton
+            tag="a"
+            target="_blank"
+            href={`${homepageUrl}`}
+            style={{ color, backgroundColor }}
+          >
             Live version
           </CardActionButton>
         </CardActionButtons>
@@ -56,6 +70,8 @@ CardElement.propTypes = {
   description: PropTypes.string.isRequired,
   homepageUrl: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  style: PropTypes.object.isRequired,
 };
 
 export default CardElement;

@@ -28,14 +28,13 @@ class App extends Component {
 
   render() {
     const { primary, secondary, tertiary } = this.state;
-    const background = primary;
     return (
-      <div style={background}>
+      <div style={primary}>
         <ApolloProvider client={client}>
           <Intro primary={primary} secondary={secondary} />
           <About tertiary={tertiary} />
           <ColorSelector handleClick={this.handleClick} />
-          <CardContainer style={background} />
+          <CardContainer style={secondary} />
         </ApolloProvider>
       </div>
     );
