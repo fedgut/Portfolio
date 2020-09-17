@@ -1,5 +1,15 @@
 #root {
   min-width: 300px;
+  position: absolute;
+  z-index: -1;
+  left: auto;
+}
+
+.color-selector {
+  position: absolute;
+  z-index: 10000;
+  top: 10px;
+  left: 10px;
 }
 
 .mdc-layout-grid {
