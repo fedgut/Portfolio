@@ -19,7 +19,7 @@ const About = props => {
         <div className="about-section2">
           When I&apos;m not coding, I lead a handmade engagement rings brand,
           Petit Bribon. My experience running a small business has taught me to
-          always deliver on time, with quality, and communicating with clients
+          always deliver on time, with quality, and keeping clients in the loop
           along the way.
         </div>
       </div>
