@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, GridCell } from '@rmwc/grid';
 import { useQuery } from '@apollo/client';
+import PropTypes from 'prop-types';
 import CardElement from '../components/cardElement';
 import GITHUB_QUERY from '../API/queries';
 
@@ -14,6 +15,11 @@ import placeholder from '../images/placeholder.png';
 function CardContainer(props) {
   const { loading, error, data } = useQuery(GITHUB_QUERY);
   const { style } = props;
+  const { color, background } = style;
+  const reverseStyle = {
+    color: background,
+    backgroundColor: color,
+  };
 
   if (loading) return 'Loading...';
   if (error) return `Error! ${error.message}`;
@@ -29,21 +35,31 @@ function CardContainer(props) {
   ];
 
   return (
-    <Grid className="card-grid">
-      {cardArray.map(card => (
-        <GridCell key={card.node.name}>
-          <CardElement
-            style={style}
-            name={card.node.name}
-            description={card.node.description}
-            homepageUrl={card.node.homepageUrl}
-            url={card.node.url}
-            image={imageArray[cardArray.indexOf(card)]}
-          />
-        </GridCell>
-      ))}
-    </Grid>
+    <div>
+      <div className="projects-wrappers" style={reverseStyle}>
+        <div className="projects">Projects</div>
+      </div>
+      <Grid className="card-grid">
+        {cardArray.map(card => (
+          <GridCell key={card.node.name}>
+            <CardElement
+              style={style}
+              name={card.node.name}
+              description={card.node.description}
+              homepageUrl={card.node.homepageUrl}
+              url={card.node.url}
+              image={imageArray[cardArray.indexOf(card)]}
+            />
+          </GridCell>
+        ))}
+      </Grid>
+    </div>
   );
 }
+
+CardContainer.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  style: PropTypes.object.isRequired,
+};
 
 export default CardContainer;

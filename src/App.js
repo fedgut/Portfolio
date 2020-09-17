@@ -31,9 +31,9 @@ class App extends Component {
     return (
       <div style={primary}>
         <ApolloProvider client={client}>
+          <ColorSelector handleClick={this.handleClick} />
           <Intro primary={primary} secondary={secondary} />
           <About tertiary={tertiary} />
-          <ColorSelector handleClick={this.handleClick} />
           <CardContainer style={secondary} />
         </ApolloProvider>
       </div>
