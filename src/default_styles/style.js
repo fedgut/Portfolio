@@ -1,7 +1,7 @@
 export const DEFAULT_STYLE = {
   primary: {
     color: '#ffffff',
-    background: '#97989a',
+    background: '#b7b7b9',
   },
   secondary: {
     color: '#ffffff',
