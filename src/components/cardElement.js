@@ -13,7 +13,6 @@ import { Typography } from '@rmwc/typography';
 function CardElement(props) {
   const { image, name, description, homepageUrl, url, style } = props;
 
-  // Here we invert color and background to give a better look and feel
   const { color } = style;
   const backgroundColor = style.background;
 

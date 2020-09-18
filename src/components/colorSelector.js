@@ -9,9 +9,6 @@ function ColorSelector(props) {
   const { handleClick, style } = props;
   return (
     <GridRow className="color-selector">
-      <Button tag="div" style={{ color: style.color }}>
-        Theme:
-      </Button>
       <Button style={style} onClick={() => handleClick(DEFAULT_STYLE)}>
         Grey-Coral
       </Button>

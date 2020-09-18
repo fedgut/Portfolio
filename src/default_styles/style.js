@@ -3,12 +3,14 @@ const darkGray = '#0c1011';
 const gray = '#b7b7b9';
 const lightGray = '#EDEDEE';
 const coral = '#ff524e';
+const coralContrast = '#c33e3c';
 
 // colors for aqua
 const aqua = '#0f8d99';
 const blueGray = '#96a9a3';
 const lightBlue = '#afd9dd';
 const black = '#000000';
+const blueGrayContrast = '#688378';
 
 // common elements
 const white = '#ffffff';
@@ -22,6 +24,7 @@ export const DEFAULT_STYLE = {
   secondary: {
     color: white,
     background: coral,
+    colorContrast: coralContrast,
   },
   tertiary: {
     color: darkGray,
@@ -38,6 +41,7 @@ export const AQUA_STYLE = {
   secondary: {
     color: white,
     background: blueGray,
+    colorContrast: blueGrayContrast,
   },
   tertiary: {
     color: black,

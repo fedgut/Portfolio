@@ -23,7 +23,7 @@ function Intro(props) {
             <br />
             <span
               style={{
-                color: secondary.background,
+                color: secondary.colorContrast,
                 backgroundColor: secondary.color,
               }}
             >
