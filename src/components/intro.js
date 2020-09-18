@@ -10,22 +10,35 @@ function Intro(props) {
     <Grid>
       <GridRow className="intro-row">
         <GridCell className="intro" style={primary}>
-          <p>
-            Hello!
-            <br />
-            My name is&nbsp;
-            <br />
-            <span
-              style={{
-                color: secondary.colorContrast,
-                backgroundColor: secondary.color,
-              }}
-            >
-              Eduardo Gutierrez
+          <div>
+            <p>
+              Hello!
+              <br />
+              My name is&nbsp;
+              <br />
+              <span
+                style={{
+                  color: secondary.colorContrast,
+                  backgroundColor: secondary.color,
+                }}
+              >
+                Eduardo Gutierrez
+              </span>
+              <br />
+              I&apos;m a Full-stack developer
+            </p>
+            <span>
+              <a
+                style={{
+                  color: secondary.colorContrast,
+                  backgroundColor: secondary.color,
+                }}
+                href="#about"
+              >
+                Know more
+              </a>
             </span>
-            <br />
-            I&apos;m a Full-stack developer
-          </p>
+          </div>
         </GridCell>
         <GridCell className="social-icons" style={secondary}>
           <SocialContainer secondary={secondary} />

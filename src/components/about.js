@@ -6,7 +6,7 @@ const About = props => {
   const { tertiary } = props;
   return (
     <div className="about-wrapper" style={tertiary}>
-      <div className="about">
+      <div className="about" id="about">
         <div className="about-section1">
           I am an ever-curious person, always looking to learn, grow, and
           explore.
