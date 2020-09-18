@@ -14,7 +14,7 @@ const black = '#000000';
 const white = '#ffffff';
 const padding = '1.5rem 3.5rem';
 
-export const DEFAULT_STYLE = {
+export const CORAL_STYLE = {
   primary: {
     color: white,
     background: gray,
@@ -30,7 +30,7 @@ export const DEFAULT_STYLE = {
   },
 };
 
-export const AQUA_STYLE = {
+export const DEFAULT_STYLE = {
   primary: {
     color: white,
     background: aqua,
