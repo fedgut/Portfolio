@@ -8,10 +8,9 @@ import { DEFAULT_STYLE, AQUA_STYLE } from '../default_styles/style';
 function ColorSelector(props) {
   const { handleClick, style } = props;
 
-  const control =
-    style.name === 'default'
-      ? { nextStyle: AQUA_STYLE, text: 'Switch to Aqua' }
-      : { nextStyle: DEFAULT_STYLE, text: 'Switch to Coral' };
+  const control = style.name === 'default'
+    ? { nextStyle: AQUA_STYLE, text: 'Switch to Aqua' }
+    : { nextStyle: DEFAULT_STYLE, text: 'Switch to Coral' };
 
   return (
     <GridRow className="color-selector">

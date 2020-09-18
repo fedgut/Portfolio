@@ -11,13 +11,15 @@ import {
 import { Typography } from '@rmwc/typography';
 
 function CardElement(props) {
-  const { image, name, description, homepageUrl, url, style } = props;
+  const {
+    image, name, description, homepageUrl, url, style,
+  } = props;
 
   const { color } = style;
   const backgroundColor = style.background;
 
   return (
-    <Card style={{ width: '21rem', height: '421px' }}>
+    <Card style={{ width: '21rem', height: '440px' }}>
       <CardPrimaryAction tag="a" target="_blank" href={`${homepageUrl}`}>
         <CardMedia
           sixteenByNine

@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 function SocialContainer(props) {
   const { secondary } = props;
   const { color } = secondary;
-  const { background } = secondary;
   return (
     <div className="social-icons-inner">
       <SocialIcon
