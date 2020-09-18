@@ -62,7 +62,7 @@ body {
   display: flex;
   align-items: center;
   height: 60vh;
-  padding: 1rem;
+  padding: 1.5rem, 1rem;
   text-align: center;
 }
 
@@ -87,7 +87,7 @@ body {
 }
 
 .mdc-button {
-  font-size: 1rem;
+  font-size: 18px;
 }
 
 @media only screen and (min-width: 415px) {

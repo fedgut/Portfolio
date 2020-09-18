@@ -9,16 +9,18 @@ function ColorSelector(props) {
   const { handleClick, style } = props;
   const contrastStyle = {
     color: style.color,
-    backgroundColor: style.backgroundContrast,
+    backgroundColor: style.colorContrast,
   };
+
+  const control =
+    style.name === 'default'
+      ? { switchTo: AQUA_STYLE, text: 'Switch to Aqua' }
+      : { switchTo: DEFAULT_STYLE, text: 'Switch to Coral' };
 
   return (
     <GridRow className="color-selector">
-      <Button style={contrastStyle} onClick={() => handleClick(DEFAULT_STYLE)}>
-        Grey-Coral
-      </Button>
-      <Button style={contrastStyle} onClick={() => handleClick(AQUA_STYLE)}>
-        Aqua
+      <Button style={contrastStyle} onClick={() => handleClick(control.switchTo)}>
+        {control.text}
       </Button>
     </GridRow>
   );
