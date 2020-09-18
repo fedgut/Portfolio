@@ -7,5 +7,5 @@ ReactDOM.render(
   <RMWCProvider>
     <App />
   </RMWCProvider>,
-  document.body,
+  document.getElementById('root'),
 );

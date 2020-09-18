@@ -1,3 +1,15 @@
+body {
+  margin: 0;
+}
+
+#root {
+  min-width: 300px;
+  position: absolute;
+  z-index: -1;
+  left: auto;
+  width: 100%;
+}
+
 .color-selector {
   position: absolute;
   z-index: 1;
@@ -9,15 +21,6 @@
   padding: 0;
 }
 
-body {
-  min-width: 300px;
-  position: absolute;
-  z-index: -1;
-  left: auto;
-  margin: 0;
-  padding: 0;
-}
-
 .mdc-card {
   flex-direction: column;
   justify-content: space-between;
@@ -25,7 +28,7 @@ body {
 
 .card-grid {
   max-width: 1200px;
-  padding-top: 6rem;
+  padding: 6rem 0;
 }
 
 .intro-row {
@@ -124,9 +127,6 @@ body {
     height: 100vh;
     text-align: left;
   }
-  .about-wrapper {
-    width: auto;
-  }
   .about {
     flex-direction: row;
     max-width: 1200px;
@@ -141,11 +141,5 @@ body {
     width: 45%;
     padding: 0;
     padding-right: 1rem;
-  }
-}
-
-@media only screen and (min-width: 1199px) {
-  .about-wrapper {
-    width: 100vw;
   }
 }
