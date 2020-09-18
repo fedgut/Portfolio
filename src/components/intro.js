@@ -9,13 +9,7 @@ function Intro(props) {
   return (
     <Grid>
       <GridRow className="intro-row">
-        <GridCell
-          className="intro"
-          style={primary}
-          phone={6}
-          tablet={4}
-          desktop={8}
-        >
+        <GridCell className="intro" style={primary}>
           <p>
             Hello!
             <br />
@@ -33,13 +27,7 @@ function Intro(props) {
             I&apos;m a Full-stack developer
           </p>
         </GridCell>
-        <GridCell
-          className="social-icons"
-          style={secondary}
-          phone={6}
-          tablet={4}
-          desktop={4}
-        >
+        <GridCell className="social-icons" style={secondary}>
           <SocialContainer secondary={secondary} />
         </GridCell>
       </GridRow>
