@@ -1,6 +1,6 @@
 // colors for coral
 const darkGray = '#0c1011';
-const gray = '#b7b7b9';
+const gray = '#939395';
 const lightGray = '#EDEDEE';
 const coral = '#ff524e';
 const coralContrast = '#c33e3c';
@@ -24,7 +24,9 @@ export const DEFAULT_STYLE = {
   secondary: {
     color: white,
     background: coral,
-    colorContrast: coralContrast,
+    colorContrast: coral,
+    backgroundContrast: coralContrast,
+    name: 'default',
   },
   tertiary: {
     color: darkGray,
@@ -42,6 +44,8 @@ export const AQUA_STYLE = {
     color: white,
     background: blueGray,
     colorContrast: blueGrayContrast,
+    backgroundContrast: blueGrayContrast,
+    name: 'aqua',
   },
   tertiary: {
     color: black,

@@ -7,12 +7,17 @@ import { DEFAULT_STYLE, AQUA_STYLE } from '../default_styles/style';
 
 function ColorSelector(props) {
   const { handleClick, style } = props;
+  const contrastStyle = {
+    color: style.color,
+    backgroundColor: style.backgroundContrast,
+  };
+
   return (
     <GridRow className="color-selector">
-      <Button style={style} onClick={() => handleClick(DEFAULT_STYLE)}>
+      <Button style={contrastStyle} onClick={() => handleClick(DEFAULT_STYLE)}>
         Grey-Coral
       </Button>
-      <Button style={style} onClick={() => handleClick(AQUA_STYLE)}>
+      <Button style={contrastStyle} onClick={() => handleClick(AQUA_STYLE)}>
         Aqua
       </Button>
     </GridRow>
