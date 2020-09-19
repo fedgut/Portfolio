@@ -23,3 +23,7 @@ in the projects sections
 
 - [Microverse](https://www.microverse.org/)
 
+## ToDos
+
+- Generate test suite
+- Add Random Theme Button
