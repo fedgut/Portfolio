@@ -14,7 +14,6 @@ const About = props => {
     <div className="about-wrapper" style={tertiary}>
       <div className="about" id="about">
         <div className="about-section1">
-          {' '}
           {paragraph1}
           <br />
           <br />
