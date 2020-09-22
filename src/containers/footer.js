@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SocialLinks from '../components/socialLinks';
-import resumeAnchor from '../components/resumeAnchor';
 import ResumeAnchor from '../components/resumeAnchor';
 
 function Footer(props) {
