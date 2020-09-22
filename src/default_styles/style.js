@@ -34,7 +34,7 @@ const {
 const white = '#ffffff';
 const padding = '1.5rem 3.5rem';
 
-export const DEFAULT_STYLE = {
+export const CORAL_STYLE = {
   primary: {
     color: white,
     background: gray,

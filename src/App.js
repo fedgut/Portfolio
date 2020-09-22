@@ -13,12 +13,12 @@ import About from './components/about';
 import ColorSelector from './components/colorSelector';
 import CardContainer from './containers/cardContainer';
 import Footer from './components/footer';
-import { DEFAULT_STYLE } from './default_styles/style';
+import { AQUA_STYLE } from './default_styles/style';
 
 class App extends Component {
   constructor() {
     super();
-    this.state = DEFAULT_STYLE;
+    this.state = AQUA_STYLE;
     this.handleClick = this.handleClick.bind(this);
   }
 
