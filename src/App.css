@@ -15,7 +15,6 @@ html {
 }
 
 a {
-  font-size: 66%;
   text-decoration: none;
 }
 
@@ -86,6 +85,10 @@ a {
   align-items: center;
 }
 
+.social-icons-inner > a {
+  margin: 10px;
+}
+
 .footer-wrapper {
   width: 100%;
 }
@@ -101,6 +104,10 @@ a {
   align-items: center;
   padding: 4rem 0;
   margin: auto;
+}
+
+.footer div {
+  text-align: center;
 }
 
 .social-icons-footer {

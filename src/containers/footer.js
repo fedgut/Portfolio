@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SocialLinks from './socialLinks';
+import SocialLinks from '../components/socialLinks';
+import ResumeAnchor from '../components/resumeAnchor';
 
 function Footer(props) {
   const { style } = props;
@@ -13,6 +14,9 @@ function Footer(props) {
         </div>
         <div className="social-icons-footer">
           <SocialLinks color={color} />
+        </div>
+        <div>
+          <ResumeAnchor style={style} />
         </div>
       </div>
     </div>

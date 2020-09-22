@@ -8,11 +8,11 @@ import './App.css';
 
 import { ApolloProvider } from '@apollo/client';
 import client from './API/gitHubClient';
-import Intro from './components/intro';
-import About from './components/about';
+import Intro from './containers/intro';
+import About from './containers/about';
 import ColorSelector from './components/colorSelector';
 import CardContainer from './containers/cardContainer';
-import Footer from './components/footer';
+import Footer from './containers/footer';
 import { AQUA_STYLE } from './default_styles/style';
 
 class App extends Component {

@@ -25,6 +25,7 @@ export default function IntroParragraph(props) {
           style={{
             color: secondary.colorContrast,
             backgroundColor: secondary.color,
+            fontSize: '60%',
           }}
           href="#about"
         >

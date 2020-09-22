@@ -1,6 +1,7 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
+import ResumeAnchor from '../components/resumeAnchor';
 
 const paragraph1 = ' I am an ever-curious person, always looking to learn, grow, and explore.';
 
@@ -26,22 +27,13 @@ const About = props => {
             }}
             href="#projects"
           >
+            <br />
             See my projects
           </a>
         </div>
         <div className="about-section2">
           {paragraph3}
-          <a
-            style={{
-              fontSize: 'inherit',
-              color: secondary.colorContrast,
-              backgroundColor: secondary.color,
-            }}
-            href="https://eduardo-portfolio.s3.us-east-2.amazonaws.com/Eduardo_Gutierrez_Resume.pdf"
-          >
-            Get my Resume
-          </a>
-          <br />
+          <ResumeAnchor style={secondary} />
         </div>
       </div>
     </div>
