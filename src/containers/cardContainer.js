@@ -15,9 +15,9 @@ import placeholder from '../images/placeholder.png';
 function CardContainer(props) {
   const { loading, error, data } = useQuery(GITHUB_QUERY);
   const { style } = props;
-  const { color, background } = style;
+  const { color, backgroundContrast } = style;
   const reverseStyle = {
-    color: background,
+    color: backgroundContrast,
     backgroundColor: color,
   };
 
