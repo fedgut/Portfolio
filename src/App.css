@@ -54,7 +54,7 @@ a {
   margin: auto;
   padding: 56px;
   font-size: 2.5rem;
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Roboto Mono', monospace;
   text-align: center;
 }
 
@@ -69,7 +69,7 @@ a {
   font-family: 'Exo 2', sans-serif;
   display: flex;
   align-items: center;
-  height: 60vh;
+  height: 72vh;
   padding: 1rem;
   text-align: center;
   margin-top: 10px;
@@ -79,8 +79,38 @@ a {
   font-size: 2rem;
   font-family: 'Exo 2', sans-serif;
   display: flex;
-  height: 39vh;
+  flex-direction: row;
+  height: 25vh;
+  width: 100%;
+  justify-content: center;
   align-items: center;
+}
+
+.footer-wrapper {
+  width: 100%;
+}
+
+.footer {
+  font-size: 1.5rem;
+  font-family: 'Roboto Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  min-width: 300px;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+  margin: auto;
+}
+
+.social-icons-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.social-icons-footer a {
+  margin: 10px;
 }
 
 .mdc-typography--subtitle2 {
@@ -146,6 +176,10 @@ a {
     align-items: center;
     height: 60%;
     max-height: 450px;
+  }
+
+  .social-icons-inner > a {
+    margin: 0;
   }
 }
 
