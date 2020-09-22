@@ -44,7 +44,7 @@ export const CORAL_STYLE = {
     background: coral,
     colorContrast: coral,
     backgroundContrast: coralContrast,
-    name: 'default',
+    name: 'coral',
   },
   tertiary: {
     color: darkGray,
