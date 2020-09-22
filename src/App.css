@@ -85,9 +85,9 @@ a {
   align-items: center;
 }
 
-  .social-icons-inner > a {
-    margin: 10px;
-  }
+.social-icons-inner > a {
+  margin: 10px;
+}
 
 .footer-wrapper {
   width: 100%;
