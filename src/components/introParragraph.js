@@ -12,8 +12,7 @@ export default function IntroParragraph(props) {
         <br />
         <span
           style={{
-            color: secondary.colorContrast,
-            backgroundColor: secondary.color,
+            fontWeight: 'bold',
           }}
         >
           Eduardo Gutierrez
