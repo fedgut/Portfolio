@@ -12,6 +12,7 @@ import Intro from './components/intro';
 import About from './components/about';
 import ColorSelector from './components/colorSelector';
 import CardContainer from './containers/cardContainer';
+import Footer from './components/footer';
 import { DEFAULT_STYLE } from './default_styles/style';
 
 class App extends Component {
@@ -35,6 +36,7 @@ class App extends Component {
           <Intro primary={primary} secondary={secondary} />
           <About secondary={secondary} tertiary={tertiary} />
           <CardContainer style={secondary} />
+          <Footer style={secondary} />
         </ApolloProvider>
       </div>
     );
