@@ -37,7 +37,9 @@ function CardContainer(props) {
   return (
     <div>
       <div className="projects-wrappers" style={reverseStyle}>
-        <div className="projects">Projects</div>
+        <div id="projects" className="projects">
+          Projects
+        </div>
       </div>
       <Grid className="card-grid">
         {cardArray.map(card => (

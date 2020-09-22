@@ -12,12 +12,13 @@ import Intro from './components/intro';
 import About from './components/about';
 import ColorSelector from './components/colorSelector';
 import CardContainer from './containers/cardContainer';
-import { DEFAULT_STYLE } from './default_styles/style';
+import Footer from './components/footer';
+import { AQUA_STYLE } from './default_styles/style';
 
 class App extends Component {
   constructor() {
     super();
-    this.state = DEFAULT_STYLE;
+    this.state = AQUA_STYLE;
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -33,8 +34,9 @@ class App extends Component {
         <ApolloProvider client={client}>
           <ColorSelector style={secondary} handleClick={this.handleClick} />
           <Intro primary={primary} secondary={secondary} />
-          <About tertiary={tertiary} />
+          <About secondary={secondary} tertiary={tertiary} />
           <CardContainer style={secondary} />
+          <Footer style={secondary} />
         </ApolloProvider>
       </div>
     );
