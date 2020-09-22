@@ -54,7 +54,7 @@ a {
   margin: auto;
   padding: 56px;
   font-size: 2.5rem;
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Roboto Mono', monospace;
   text-align: center;
 }
 
@@ -99,8 +99,18 @@ a {
   min-width: 300px;
   justify-content: center;
   align-items: center;
-  padding-bottom: 6rem;
+  padding: 4rem 0;
   margin: auto;
+}
+
+.social-icons-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.social-icons-footer a {
+  margin: 10px;
 }
 
 .mdc-typography--subtitle2 {
