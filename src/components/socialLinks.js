@@ -34,8 +34,7 @@ function SocialLinks(props) {
 }
 
 SocialLinks.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  color: PropTypes.object.isRequired,
+  color: PropTypes.string.isRequired,
 };
 
 export default SocialLinks;

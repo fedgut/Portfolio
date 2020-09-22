@@ -2,8 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid, GridRow, GridCell } from '@rmwc/grid';
-import SocialContainer from '../containers/socialContainer';
-import IntroParragraph from './introParragraph';
+import SocialContainer from './socialContainer';
+import IntroParragraph from '../components/introParragraph';
 
 function Intro(props) {
   const { primary, secondary } = props;
